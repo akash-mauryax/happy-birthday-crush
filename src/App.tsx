@@ -77,7 +77,7 @@ const BACKGROUND_FADE_START = Math.max(
 );
 
 const TYPED_LINES = [
-  "> tina",
+  "> Akash",
   "...",
   "> today is your birthday",
   "...",
@@ -527,7 +527,7 @@ export default function App() {
               (!typingComplete || !sceneStarted);
             return (
               <span className="typed-line" key={`typed-line-${index}`}>
-                {line || "\u00a0"}
+                {!hasStarted && index === 0 ? "> (press SPACE to start)" : (line || "\u00a0")}
                 {showCursor && (
                   <span aria-hidden="true" className="typed-cursor">
                     _
